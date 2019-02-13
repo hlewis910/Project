@@ -8,30 +8,30 @@ The requirements below are broken into separate **tiers**, which model the way w
 
 #### Backend
 
-- [ ] Write a `campuses` model with the following information:
-  - [ ] name - not empty or null
-  - [ ] imageUrl - with a default value
-  - [ ] address - not empty or null
-  - [ ] description - extremely large text
-- [ ] Write a `students` model with the following information:
-  - [ ] firstName - not empty or null
-  - [ ] lastName - not empty or null
-  - [ ] email - not empty or null; must be a valid email
-  - [ ] imageUrl - with a default value
-  - [ ] gpa - decimal between 0.0 and 4.0
-- [ ] Students may be associated with at most one campus. Likewise, campuses may be associated with many students
+- [ X] Write a `campuses` model with the following information:
+  - [X ] name - not empty or null
+  - [X] imageUrl - with a default value
+  - [X ] address - not empty or null
+  - [X ] description - extremely large text
+- [ X] Write a `students` model with the following information:
+  - [ X] firstName - not empty or null
+  - [X ] lastName - not empty or null
+  - [ X] email - not empty or null; must be a valid email
+  - [X ] imageUrl - with a default value
+  - [ X] gpa - decimal between 0.0 and 4.0
+- [ X] Students may be associated with at most one campus. Likewise, campuses may be associated with many students
 
-- [ ] Write a route to serve up all students
-- [ ] Write a route to serve up all campuses
+- [X ] Write a route to serve up all students
+- [X ] Write a route to serve up all campuses
 
 #### Frontend
-- [ ] Write a campuses sub-reducer to manage campuses in your Redux store
-- [ ] Write a students sub-reducer to manage students in your Redux store
-- [ ] Write a component to display a list of all campuses (just their names and images)
-- [ ] Write a component to display a list of all students (just their names)
-- [ ] Display the all-campuses component when the url matches `/campuses`
-- [ ] Display the all-students component when the url matches `/students`
-- [ ] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
+- [x ] Write a campuses sub-reducer to manage campuses in your Redux store
+- [ x] Write a students sub-reducer to manage students in your Redux store
+- [X ] Write a component to display a list of all campuses (just their names and images)
+- [X ] Write a component to display a list of all students (just their names)
+- [ X] Display the all-campuses component when the url matches `/campuses`
+- [ X] Display the all-students component when the url matches `/students`
+- [ x] Add links to the navbar that can be used to navigate to the all-campuses view and the all-students view
 
 Congrats! You have completed your first vertical slice! Make sure to `commit -m "Feature: Get All Campuses and Students"` before moving on (see `RUBRIC.md` - points are awarded/deducted for a proper git workflow)!
 
@@ -43,12 +43,12 @@ Congrats! You have completed your first vertical slice! Make sure to `commit -m 
 
 #### Backend
 
-- [ ] Write a route to serve up a single campus (based on its id), _including that campuses' students_
-- [ ] Write a route to serve up a single student (based on their id), _including that student's campus_
+- [x ] Write a route to serve up a single campus (based on its id), _including that campuses' students_
+- [x ] Write a route to serve up a single student (based on their id), _including that student's campus_
 
 #### Frontend
 - [ ] Write a component to display a single campus with the following information:
-  - [ ] The campus's name, image, address and description
+  - [ x] The campus's name, image, address and description
   - [ ] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
 - [ ] Display the appropriate campus's info when the url matches `/campuses/:campusId`
 - [ ] Clicking on a campus from the all-campuses view should navigate to show that campus in the single-campus view
@@ -73,8 +73,8 @@ Congrats! You have completed your second vertical slice! Make sure to `commit -m
 
 #### Backend
 
-- [ ] Write a route to add a new campus
-- [ ] Write a route to add a new student
+- [X ] Write a route to add a new campus
+- [X ] Write a route to add a new student
 
 #### Frontend
 
@@ -101,8 +101,8 @@ Congrats! You have completed your third vertical slice! Make sure to `commit -m 
 
 #### Backend
 
-- [ ] Write a route to remove a campus (based on its id)
-- [ ] Write a route to remove a student (based on their id)
+- [ X] Write a route to remove a campus (based on its id)
+- [ X] Write a route to remove a student (based on their id)
 
 #### Frontend
 
