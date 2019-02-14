@@ -10,7 +10,11 @@ class AddCampus extends Component {
       name: '',
       address: '',
     }
-} 
+
+  this.handleSubmit = this.handleSubmit.bind(this)
+  this.handleChange = this.handleChange.bind(this)
+}
+
   handleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
@@ -18,19 +22,22 @@ class AddCampus extends Component {
 } 
   handleSubmit = event => {
     event.preventDefault();
-    this.props.additionalCampus(this.state);
-    this.setState = {}
+    this.props.addCampus(this.state);
+    this.setState({
+      name: '',
+      address: ''
+    })
   } 
   render () {
     return (
         <div className="additionalCampusAdded Form">
-          <h3>Additional Campus</h3>
+          <h3></h3>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">Campus Name</label>
           <input onChange={this.handleChange} name="name" type="text" value={this.state.name} placeholder='Name'/>
           <label htmlFor="address">Campus Address</label>
           <input onChange={this.handleChange} name="address" type="text" value={this.state.address} placeholder='Address'/>         
-          <button type="submit">Add Campus</button>
+          <button type="submit">Submit</button>
           
         </form>
         </div>

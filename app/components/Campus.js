@@ -2,13 +2,16 @@ import React from 'react'
 
 
 export default function Campus(props) {
-  const { campus } = props  
+  const {name,
+     address,
+      description,
+       imageUrl } = props.campus 
   return (
     <div className="main">
-        <h2>{campus.name}</h2>
-        <img src={campus.imageUrl} />
-        <p>Campus Address: {campus.address}</p>
-        <p>Campus Description: {campus.description}</p>
+        <h2>{name}</h2>
+        <img src={imageUrl} />
+        <p>Campus Address: {address}</p>
+        <p>Campus Description: {description}</p>
     </div>
   )
 }

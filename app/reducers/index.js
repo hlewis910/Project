@@ -108,6 +108,7 @@ export const postCampus = (additionalCampus) => {
   return async(dispatch) => {
       const response = await axios.post(`/api/campuses`, additionalCampus)
       const newCampus = response.data
+      console.log('CATTTT ')
       const action = addCampus(newCampus)
       dispatch(action)
       //socket.emit('new-campus', newCampus);

@@ -6,7 +6,7 @@ const Students = require('./server/db/models/students')
 
 
 const campuses = [{
-name: 'Westeros',
+name: 'Winterfell',
 imageUrl: 'https://awoiaf.westeros.org/thumb.php?f=Lino_Drieghe_Winterfell.JPG&width=350',
 address: 'Somewhere Cold, North Winterfell',
 description: 'Where the sophisticated study'
@@ -22,7 +22,7 @@ description: 'Hot and sunny here'
 {
 name: `King's Landing`,
 imageUrl: 'https://vignette.wikia.nocookie.net/gameofthrones/images/4/43/GreatSeptExteriors.jpg/revision/latest/scale-to-width-down/300?cb=20150321161915',
-address: 'Where the gold is plenty',
+address: 'Where the gold is aplenty',
 description: 'Deception Rules'
 }
 ];

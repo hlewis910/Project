@@ -6,18 +6,18 @@ import Student from './Student';
 class SingleStudent extends Component  {
 
   componentDidMount() {
-    const studentId = this.props.match.params.studentsId
+    const studentId = this.props.match.params.studentId
     this.props.fetchSingleStudent(studentId)
   }
   
   render () {
-    const campuses = this.props.campuses.filter(campus => campus.id === this.props.student.campusId)
+    const student = this.props.student
       return (
         <div>
-          <Student student={this.props.student} />
+          <Student student={student} />
         </div>
       )
-}
+  }
 }
 
 

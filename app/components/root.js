@@ -7,7 +7,7 @@ import Homepage from './Homepage'
 import Campuses from './Campuses'
 import Students from './Students'
 import SingleStudent from './SingleStudent'
-import Campus from './Campus'
+import SingleCampus from './SingleCampus'
 
 
 class Root extends Component {
@@ -24,7 +24,7 @@ render() {
       <main>
       <Route exact path='/' component={Homepage} />
       <Route exact path='/campuses' component={Campuses} />
-      <Route path='/campuses/:campusesId' component={Campus} />
+      <Route path='/campuses/:campusId' component={SingleCampus} />
       <Route exact path='/students' component={Students} />
       <Route path='/students/:studentId' component={SingleStudent} />
       </main>

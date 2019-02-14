@@ -11,7 +11,7 @@ const db = require('../database')
     },
   imageUrl: {
     type: Sequelize.STRING,
-    defaultValue: 'https://pm1.narvii.com/5874/f3d1a81a398d055dd4b5e66f74eeda388c4a757e_hq.jpg'
+    defaultValue: 'https://vignette.wikia.nocookie.net/gameofthrones/images/8/89/Meereen.png/revision/latest?cb=20150328211743'
     },
   address: {
     type: Sequelize.STRING,
@@ -22,8 +22,7 @@ const db = require('../database')
   },
   description: {
     type: Sequelize.TEXT,
-    unique: false,
-    allowNull: false
+    defaultValue: 'cat'
   }
 })
 

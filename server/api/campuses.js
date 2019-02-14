@@ -1,4 +1,5 @@
 const router = require('express').Router()
+
 const Campuses = require('../db/models/campuses')
 const Students = require('../db/models/students')
 
@@ -14,8 +15,8 @@ router.get('/', async (req, res, next) => {
 router.get('/:campusId', async (req, res, next) => {
     try {
       const campusId = req.params.campusId;
-      const campus = await Campuses.findbyId(campusId, {
-          include: [{ model: Students }]
+      const campus = await Campuses.findById(campusId, {
+          include: [{model: Students}]
     })
       if (campus) res.json(campus)
       else res.status(400).json('Campus does not exist')

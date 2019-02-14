@@ -27,7 +27,7 @@ router.get('/:studentId', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
         try {
-          const addStudent = await Campuses.create(req.body)
+          const addStudent = await Students.create(req.body)
           res.json(addStudent);
         } catch (err) {
           next(err)
@@ -36,7 +36,7 @@ router.post('/', async (req, res, next) => {
 
 router.put('/:studentId', async (req, res, next) => {
   try {
-    const specificStudent = await Students.findById(req.params.studentsId)
+    const specificStudent = await Students.findById(req.params.studentId)
     const result = await specificStudent.update(req.body)
     res.json(result);
   } catch (err) {

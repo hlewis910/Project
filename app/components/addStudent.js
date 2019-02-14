@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { postStudent } from '../reducers'
 
+
 class AddStudent extends Component  {  
   constructor() {
     super()
@@ -21,12 +22,17 @@ class AddStudent extends Component  {
   }
   handleSubmit = event => {
     event.preventDefault();
-    this.props.additionalStudent(this.state)
+    this.props.addStudent(this.state);
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: ''
+    })
   }
   render () {
     return (
         <div className="additionalStudentAdded">
-          <h3>Additional Student</h3>
+          <h3></h3>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="firstName">First Name</label>
           <input onChange={this.handleChange} name="firstName" type="text" value={this.state.firstName} placeholder='FIRST NAME'/>  
@@ -34,7 +40,7 @@ class AddStudent extends Component  {
           <input onChange={this.handleChange} name="lastName" type="text" value={this.state.lastName} placeholder='LAST NAME'/>
            <label htmlFor="email">Email Address</label>
           <input onChange={this.handleChange} name="email" type="text" value={this.state.email} placeholder='EMAIL'/>      
-          <button type="submit">Student</button> 
+          <button type="submit">Submit</button> 
         </form>
      </div>
   )

@@ -9,7 +9,7 @@ const Campuses = (props) => {
   console.log(props, 'hello')
   return (
     <div>
-      <h1> Campuses </h1>
+      <h1> </h1>
       <div>
       <AddCampus />
       <CampusView campusesAll={props.campusesAll} removeCampus={props.removeCampus} />

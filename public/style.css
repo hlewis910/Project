@@ -8,21 +8,37 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
 body {
-  background: linear-gradient(#ffffff, #c0c0c0);
+  background: url('https://i.pinimg.com/originals/87/3b/cf/873bcfd93f96cd89591b6cbea3ca3515.jpg') fixed;
+  background-size: cover;
   height: 100vh;
   padding: 0;
   margin: 0;
   width: 100vw;
 }
 
+.homePage img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+.homePage h1 {
+font-family: fantasy;
+font-size: 30pt;
+}
+
 nav {
   align-items: center;
-  background-color: #333333;
   color: #c0c0c0;
+  background-color: steelblue;
   display: flex;
   height: 80px;
   padding: 10px;
+  justify-content: space-evenly;
+  
 }
 
 main {
@@ -40,13 +56,11 @@ img {
 }
 
 
-#navbar {
-  width: 100%;
+ a {
   height: 50px;
-  background-color: #eee;
-  color: gray;
-  align-items: center;
-  justify-content: space-evenly;
+  color: silver;
+  padding: 6px;
+  font-family: fantasy;
 }
 
 .wrap {
@@ -54,7 +68,46 @@ img {
 }
 
 
-.row {
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.Student{
+  flex-direction: center;
+
+}
+
+form {
   display: flex;
   flex-direction: row;
+  background-color: lightsteelblue;
+  padding: 14px;
+  margin-bottom: 14px;
+  
+}
+
+form label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  padding: 0 8px;
+}
+
+form input {
+  padding: 6px;
+  border: none;
+  margin: 9px;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: none;
+}
+
+button {
+  color: forestgreen;
+  padding: 10px;
+}
+
+button:hover {
+  cursor: move;
 }
