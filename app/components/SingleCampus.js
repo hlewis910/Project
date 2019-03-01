@@ -12,6 +12,8 @@ class SingleCampus extends Component {
 
   render() {
       const campus = this.props.campus
+     // console.log(campus, "CATTTTTTTTTTTT")
+     // console.log(campus.students[0].firstName, "DANYYYYYY")
       return (
           <div>
           <Campus campus={campus} />

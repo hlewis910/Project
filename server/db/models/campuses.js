@@ -22,7 +22,7 @@ const db = require('../database')
   },
   description: {
     type: Sequelize.TEXT,
-    defaultValue: 'cat'
+    defaultValue: 'Mereen'
   }
 })
 

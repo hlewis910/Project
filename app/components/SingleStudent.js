@@ -30,5 +30,4 @@ const mapStateToProps = (state) => ({
     fetchSingleStudent: (studentId) => dispatch(fetchSingleStudent(studentId)),
   })
   
-
   export default connect(mapStateToProps, mapDispatchToProps)(SingleStudent)

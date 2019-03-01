@@ -53,6 +53,18 @@ export const addStudent = (additionalStudent) => ({
   additionalStudent
 })
 
+const UPDATE_CAMPUS = 'UPDATE_CAMPUS'
+const UPDATE_STUDENT = 'UPDATE_STUDENT'
+
+export const updateCampus = (campusId) => ({
+  type: UPDATE_CAMPUS,
+  campusId
+})
+
+export const updateStudent = (studentId) => ({
+  type: UPDATE_STUDENT,
+  studentId
+})
 
 const REMOVE_CAMPUS = 'REMOVE_CAMPUS'
 const REMOVE_STUDENT = 'REMOVE_STUDENT'
@@ -66,6 +78,7 @@ export const removeStudent = (studentId) => ({
   type: REMOVE_STUDENT,
   studentId
 })
+
 
 //THUNKS
 export const fetchCampusList = () => {
@@ -108,7 +121,6 @@ export const postCampus = (additionalCampus) => {
   return async(dispatch) => {
       const response = await axios.post(`/api/campuses`, additionalCampus)
       const newCampus = response.data
-      console.log('CATTTT ')
       const action = addCampus(newCampus)
       dispatch(action)
       //socket.emit('new-campus', newCampus);
@@ -125,8 +137,25 @@ export const postStudent = (additionalStudent) => {
   }
 }
 
+export const putCampus = (campusId) => {
+  return async(dispatch) => {
+    const response = await axios.put(`/api/campuses/${campusId}`)
+    const updatedCampus = response.data
+    const action = updateCampus(updatedCampus)
+    dispatch(action)
+  }
+}
+
+export const putStudent = (studentId) => {
+  return async(dispatch) => {
+    const response = await axios.put(`api/students/${studentId}`)
+    const updatedStudent = response.data
+    const action = updateStudent(updatedStudent)
+    dispatch(action)
+  }
+}
+
 export const destroyCampus = (campusId) => {
-  console.log('helloooo')
   return async(dispatch) => {
    await axios.delete(`/api/campuses/${campusId}`)
    await dispatch(removeCampus(campusId))
@@ -160,6 +189,12 @@ const rootReducer = (state = initialState, action) => {
     }
     case ADD_STUDENT: {
       return {...state, students: [...state.students, action.additionalStudent]}
+    }
+    case UPDATE_CAMPUS: {
+      return {...state, campuses: [...state.campuses, action.updatedCampus]}
+    }
+    case UPDATE_STUDENT: {
+      return {...state, students: [...state.students, action.updatedStudent]}
     }
     case REMOVE_CAMPUS: {
     return {...state, campuses: state.campuses.filter(campus => campus.id !== action.campusId)}
