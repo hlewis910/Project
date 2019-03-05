@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function Student(props) {
-  const {firstName,
+  const {
+    firstName,
     lastName,
     imageUrl,
     gpa,

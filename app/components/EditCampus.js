@@ -22,15 +22,15 @@ class EditCampus extends Component {
 
     render() {
         return (
-            <div classname='addCampusForm'>
+            <div className='addCampusForm'>
             <h2>Edit Campus Form</h2>
             <form onSubmit= {this.handleSubmit}>
             <label htmlFor="name" > Campus Name</label>
             <input onChange = {this.handleChange} name="name" type="text"
-            value={this.state.name} placeholder='Edit Name'/>
+            value={this.state.name} >
             <label htmlFor="address"> Campus Address </label>
             <input onChange={this.handleChange} name="address" type="text"
-            value={this.state.address} placeholder= 'Edit Address'/>
+            value={this.state.address} />
             <button type="submit">Edit Campus</button>
               </form>
             </div>

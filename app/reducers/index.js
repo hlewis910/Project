@@ -79,6 +79,15 @@ export const removeStudent = (studentId) => ({
   studentId
 })
 
+export const putStudent = (studentId) => ({
+  type: PUT_SUDENT,
+  studentId
+})
+
+export const putCampus = (campusId) => ({
+  type: PUT_CAMPUS,
+  campusId
+})
 
 //THUNKS
 export const fetchCampusList = () => {
@@ -133,7 +142,7 @@ export const postStudent = (additionalStudent) => {
       const newStudent = response.data
       const action = addStudent(newStudent)
       dispatch(action)
-      //socket.emit('new-campus', newCampus);
+      
   }
 }
 

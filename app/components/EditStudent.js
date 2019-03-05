@@ -13,7 +13,7 @@ class EditStudent extends Component {
         }
     }
 
-    handleChane = event => {
+    handleChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -31,15 +31,13 @@ class EditStudent extends Component {
             <form onSubmit= {this.handleSubmit}>
             <label htmlFor="firstName" > Student First Name</label>
             <input onChange ={this.handleChange} name="firstName" type="text"
-            value={this.state.firstName} placeholder="Edit First Name" />
-
+            value={this.state.firstName} >
             <label htmlFor="lastName"> Student Last Name </label>
             <input onChange= {this.handleChange} name="lastName" type="text"
-            value={this.state.lastName} placeholder="Edit Last Name" />
-
+            value={this.state.lastName}  />
             <label htmlFor="email">Email</label> 
             <input onChange={this.handleChange} name="email" type="text"
-            value={this.state.email} placeholder= "Edit Email" />      
+            value={this.state.email}  />      
             <button type="submit">Edit Student</button>
             </form>
             </div>

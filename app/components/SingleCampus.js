@@ -12,12 +12,19 @@ class SingleCampus extends Component {
 
   render() {
       const campus = this.props.campus
-     // console.log(campus, "CATTTTTTTTTTTT")
-     // console.log(campus.students[0].firstName, "DANYYYYYY")
+      console.log(this.props.campus)
+
       return (
+        <React.Fragment>
           <div>
           <Campus campus={campus} />
           </div>
+          <div>
+            {/* <p>{ campus.students[0].campusId }</p> */}
+            <p>This is a test parargraph</p>
+            
+          </div>
+        </React.Fragment>
       )
   }
 }
