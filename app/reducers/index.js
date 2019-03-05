@@ -79,15 +79,15 @@ export const removeStudent = (studentId) => ({
   studentId
 })
 
-export const putStudent = (studentId) => ({
-  type: PUT_SUDENT,
-  studentId
-})
+// export const putStudent = (studentId) => ({
+//   type: PUT_SUDENT,
+//   studentId
+// })
 
-export const putCampus = (campusId) => ({
-  type: PUT_CAMPUS,
-  campusId
-})
+// export const putCampus = (campusId) => ({
+//   type: PUT_CAMPUS,
+//   campusId
+// })
 
 //THUNKS
 export const fetchCampusList = () => {

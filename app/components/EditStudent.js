@@ -1,53 +1,53 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
-import {updateStudent} from '../reducers'
+// import React, {Component} from 'react'
+// import {connect} from 'react-redux'
+// import {updateStudent} from '../reducers'
 
 
-class EditStudent extends Component {
-    constructor() {
-        super()
-        this.state = {
-            firstName: '',
-            lastname: '',
-            email: ''
-        }
-    }
+// class EditStudent extends Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             firstName: '',
+//             lastname: '',
+//             email: ''
+//         }
+//     }
 
-    handleChange = event => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
+//     handleChange = event => {
+//         this.setState({
+//             [event.target.name]: event.target.value
+//         })
+//     }
 
-    handleSubmit = event => {
-        event.preventDefault();
-        this.props.putStudent({...this.state, id: this.props.studentId })
-    }
+//     handleSubmit = event => {
+//         event.preventDefault();
+//         this.props.putStudent({...this.state, id: this.props.studentId })
+//     }
 
-    render() {
-        return (
-            <div className="addCampusForm">
-            <h2> Edit Student Form </h2>
-            <form onSubmit= {this.handleSubmit}>
-            <label htmlFor="firstName" > Student First Name</label>
-            <input onChange ={this.handleChange} name="firstName" type="text"
-            value={this.state.firstName} >
-            <label htmlFor="lastName"> Student Last Name </label>
-            <input onChange= {this.handleChange} name="lastName" type="text"
-            value={this.state.lastName}  />
-            <label htmlFor="email">Email</label> 
-            <input onChange={this.handleChange} name="email" type="text"
-            value={this.state.email}  />      
-            <button type="submit">Edit Student</button>
-            </form>
-            </div>
-        )
-    }
-}
+//     render() {
+//         return (
+//             <div className="addCampusForm">
+//             <h2> Edit Student Form </h2>
+//             <form onSubmit= {this.handleSubmit}>
+//             <label htmlFor="firstName" > Student First Name</label>
+//             <input onChange ={this.handleChange} name="firstName" type="text"
+//             value={this.state.firstName} >
+//             <label htmlFor="lastName"> Student Last Name </label>
+//             <input onChange= {this.handleChange} name="lastName" type="text"
+//             value={this.state.lastName}  />
+//             <label htmlFor="email">Email</label> 
+//             <input onChange={this.handleChange} name="email" type="text"
+//             value={this.state.email}  />      
+//             <button type="submit">Edit Student</button>
+//             </form>
+//             </div>
+//         )
+//     }
+// }
 
 
-const mapDispatchToProps = (dispatch) => ({
-    putStudent: (data) => dispatch(updateStudent(data))
-})
+// const mapDispatchToProps = (dispatch) => ({
+//     putStudent: (data) => dispatch(updateStudent(data))
+// })
 
-export default connect(null, mapDispatchToProps)(EditStudent)
+// export default connect(null, mapDispatchToProps)(EditStudent)

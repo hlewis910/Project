@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import AddCampus from './addCampus'
 import { destroyCampus } from '../reducers'
 import CampusView from './CampusView'
-import EditCampus from './EditCampus'
+// import EditCampus from './EditCampus'
 
 
 const Campuses = (props) => {
@@ -14,7 +14,7 @@ const Campuses = (props) => {
       <div>
       <AddCampus />
       <CampusView campusesAll={props.campusesAll} removeCampus={props.removeCampus} />
-      <EditCampus/>
+      {/* <EditCampus/> */}
       </div>
     </div>
   )

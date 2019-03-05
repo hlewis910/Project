@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { destroyStudent } from '../reducers'
 import AddStudent from './addStudent'
-import EditStudent from './EditStudent'
+//import EditStudent from './EditStudent'
 import StudentView from './StudentView'
 
 
@@ -13,7 +13,7 @@ import StudentView from './StudentView'
       <div>
       <AddStudent />
       <StudentView studentsAll={props.studentsAll} removeStudent={props.removeStudent} />  
-      <EditStudent />
+      {/* <EditStudent /> */}
       </div>
     </div>
   )
